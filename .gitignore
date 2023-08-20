@@ -1,0 +1,9 @@
+.env
+.idea
+*__pycache__*
+*log
+*venv
+.env.prod
+ssl/
+*.sql*
+*.db
