@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
 
     # drf
     'rest_framework',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     # user apps
     'user',
     'referral_system',
+    'authorization',
 ]
 
 MIDDLEWARE = [
@@ -133,5 +135,12 @@ AUTH_USER_MODEL = 'user.User'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
+
+
+CODE_LIVE_HOURS = 12
